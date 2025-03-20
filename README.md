@@ -27,7 +27,7 @@
 ## ER図
 
 （ここに ER 図の画像を貼る）
-![ER図](./path/to/er-diagram.png)
+![ER図](er-diagram.png)
 
 ## URL
 
