@@ -1,0 +1,221 @@
+/* 管理画面の全体のスタイル */
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f6f2;
+}
+
+/* タイトルのデザイン */
+.admin-container h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #6d5d4b;
+}
+
+/* 🔹検索フォームのスタイル */
+.admin-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    gap: 10px;
+    /* 要素間の余白 */
+}
+
+/* 🔹入力フォーム・セレクトボックス */
+.admin-filter input,
+.admin-filter select {
+    flex: 1;
+    min-width: 180px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="date"]::before {
+    content: attr(placeholder);
+    color: #aaa;
+    /* 薄いグレーでプレースホルダー表示 */
+}
+
+input[type="date"]:focus::before {
+    content: "";
+}
+
+/* 🔹ボタンデザイン */
+.admin-filter button {
+    padding: 10px 15px;
+    background-color: #8c7b6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100px;
+}
+
+.admin-filter button:hover {
+    background-color: #6d5d4b;
+}
+
+/* 🔹リセットボタン */
+.reset-btn {
+    background-color: #d6c4b1;
+    color: #6d5d4b;
+}
+
+.reset-btn:hover {
+    background-color: #b8a38a;
+}
+
+/* 🔹エクスポートボタン */
+.export-form {
+    text-align: left;
+    /* 左寄せ */
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.export-btn {
+    padding: 10px 15px;
+    background-color: #c5a78b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.export-btn:hover {
+    background-color: #a3856f;
+}
+
+/* 🔹テーブルデザイン */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #8c7b6a;
+    color: white;
+}
+
+/* 🔹詳細ボタン */
+.detail-btn {
+    padding: 7px 12px;
+    background-color: #d1b38c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail-btn:hover {
+    background-color: #b08d6a;
+}
+
+/* 🔹ページネーション */
+.pagination {
+    text-align: center;
+    margin-top: 15px;
+    /* 余白を調整 */
+}
+
+.pagination a {
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #f1e6d3;
+    color: #6d5d4b;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #c5a78b;
+    color: white;
+}
+
+/* モーダルを非表示にする（デフォルト） */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 9999;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* チェックボックスがチェックされたらモーダルを表示 */
+.modal-toggle:checked+.detail-btn+.modal {
+    display: block;
+}
+
+/* 詳細ボタンの見た目 */
+.detail-btn {
+    cursor: pointer;
+    background-color: #c5a78b;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.detail-btn:hover {
+    background-color: #a3856f;
+}
+
+/* 削除ボタンのスタイル（任意） */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}

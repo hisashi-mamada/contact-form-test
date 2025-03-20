@@ -1,0 +1,73 @@
+/* ログインページ全体 */
+.login-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #f7f6f5;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトル */
+.login-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* フォームの各項目 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0dcd8;
+    border-radius: 5px;
+    background: #fff;
+}
+
+/* ログインボタン */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background: #8c7b70;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background: #5c4c40;
+}
+
+/* 右上の新規登録ボタン */
+.header-register {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.register-button {
+    text-decoration: none;
+    font-size: 14px;
+    color: #8c7b70;
+    background: transparent;
+    border: 1px solid #d3c8be;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.register-button:hover {
+    background: #5c4c40;
+    color: white;
+}

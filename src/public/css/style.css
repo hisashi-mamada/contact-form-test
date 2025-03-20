@@ -1,0 +1,242 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #5c4c40;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #8c7a6b;
+}
+
+/* フォーム全体 */
+form {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* フォームグループのスタイル */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: baseline;
+}
+
+label {
+    display: flex;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #8c7a6b;
+    margin-left: 100px;
+}
+
+/* テキスト入力、セレクトボックス、テキストエリアのスタイル */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width:450px;
+    padding: 12px;
+    border: 1px solid #e0dcd8;
+    border-radius: 4px;
+    background-color: #f7f6f5;
+    color: #5c4c40;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.phone-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.phone-group input {
+    width: 70px !important;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.phone-group span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+}
+
+
+input{
+    height: 10px;
+}
+
+textarea{
+    height:60px ;
+}
+
+/* ラジオボタンのスタイル */
+.form-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.form-group label[for^="gender"] {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+/* ボタンのスタイル */
+button {
+    width: 30%;
+    padding: 12px 20px;
+    background-color: #8c7a6b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #715f50;
+}
+
+/* エラーメッセージ */
+.error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* 管理画面用テーブル（既存のまま） */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.confirm-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.confirm-table th,
+.confirm-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.confirm-table th {
+    width: 30%;
+    background-color: #b9a699;
+    color: #fff;
+    text-align: left;
+    font-weight: normal;
+}
+
+.confirm-table td {
+    width: 70%;
+    background-color: #fff;
+    color: #5c4c40;
+}
+
+.button-group {
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.button-group button {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #8c7a6b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #715f50;
+}
+
+.thanks-container {
+    max-width: 700px;
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+}
+
+.thanks-message {
+    font-size: 18px;
+    color: #8c7a6b;
+    font-weight: bold;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* 背景のThank youの文字 */
+.thanks-container::before {
+    content: 'Thank you';
+    font-size: 100px;
+    color: rgba(140, 122, 107, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #8c7a6b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.home-button:hover {
+    background-color: #715f50;
+}
