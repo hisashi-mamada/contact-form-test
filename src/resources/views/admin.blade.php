@@ -3,8 +3,13 @@
 @section('title', 'Admin')
 
 @section('content')
+
+<div class="header-logout">
+    <a href="{{ route('login') }}" class="logout-button">logout</a>
+</div>
+
 <div class="admin-container">
-    <h1>Admin</h1>
+    <h2>Admin</h2>
 
     <!-- 検索フォーム -->
     <form action="{{ route('admin.index') }}" method="GET" class="search-form">
@@ -50,6 +55,8 @@
         <input type="hidden" name="date" value="{{ request('date') }}">
 
         <button type="submit" class="export-btn">エクスポート</button>
+
+
     </form>
 
     <!-- データ一覧 -->
@@ -104,7 +111,7 @@
                                 </tr>
                                 <tr>
                                     <th>電話番号</th>
-                                    <td>{{ $contact->phone }}</td>
+                                    <td>{{ $contact['phone1'] }}-{{ $contact['phone2'] }}-{{ $contact['phone3'] }}</td>
                                 </tr>
                                 <tr>
                                     <th>住所</th>
@@ -136,7 +143,6 @@
         </tbody>
     </table>
 
-    <!-- ページネーション -->
     <div class="pagination">
         {{ $contacts->links() }}
     </div>

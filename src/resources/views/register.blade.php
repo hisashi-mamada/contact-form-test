@@ -3,8 +3,16 @@
 @section('title', '新規登録')
 
 @section('content')
+
+<div class="header-login">
+    <a href="{{ route('login') }}" class="login-button">login</a>
+</div>
+
+
 <div class="register-container">
-    <h1>Register</h1>
+
+    <h2 class="register-title">Register</h2>
+
     <form action="{{ route('register') }}" method="POST">
         @csrf
         <div class="form-group">

@@ -3,8 +3,13 @@
 @section('title', 'ログイン')
 
 @section('content')
+
+<div class="header-register">
+    <a href="{{ route('register') }}" class="register-button">register</a>
+</div>
+
 <div class="login-container">
-    <h1>Login</h1>
+    <h2 class="login-title">Login</h2>
 
     <!-- エラーメッセージ表示 -->
     @if(session('error'))

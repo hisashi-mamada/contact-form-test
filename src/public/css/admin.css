@@ -1,16 +1,51 @@
 /* 管理画面の全体のスタイル */
 .admin-container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 50px;
     background-color: #f9f6f2;
+    box-sizing: border-box;
+}
+
+.header-logout {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+
+.logout-button {
+    text-decoration: none;
+    font-size: 24px;
+    color: #8c7b70;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+
+.logout-button:hover {
+    background: #5c4c40;
+    color: white;
 }
 
 /* タイトルのデザイン */
-.admin-container h1 {
+h2 {
     text-align: center;
     font-size: 28px;
     color: #6d5d4b;
+    font-family: 'Playfair Display', serif;
+}
+
+.search-form {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* 🔹検索フォームのスタイル */
@@ -19,25 +54,22 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
     width: 100%;
     background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    gap: 10px;
-    /* 要素間の余白 */
+
 }
 
 /* 🔹入力フォーム・セレクトボックス */
 .admin-filter input,
 .admin-filter select {
-    flex: 1;
-    min-width: 180px;
-    padding: 10px;
+    flex-grow: 0;
+    width: 250px;
+    padding: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 10px;
+    background-color: #fafafa
 }
 
 input[type="date"]::before {
@@ -78,20 +110,26 @@ input[type="date"]:focus::before {
 
 /* 🔹エクスポートボタン */
 .export-form {
-    text-align: left;
-    /* 左寄せ */
-    margin-bottom: 10px;
-    padding-left: 15px;
+    width: 100%;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
 }
 
 .export-btn {
-    padding: 10px 15px;
-    background-color: #c5a78b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 150px;
+    padding: 12px 18px;
+        background-color: #c5a992;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        min-width: 100px;
+        text-align: center;
+        display: inline-block;
+        margin-left: 20px;
 }
 
 .export-btn:hover {
@@ -128,6 +166,8 @@ input[type="date"]:focus::before {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 .detail-btn:hover {
@@ -136,9 +176,10 @@ input[type="date"]:focus::before {
 
 /* 🔹ページネーション */
 .pagination {
-    text-align: center;
-    margin-top: 15px;
-    /* 余白を調整 */
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
 }
 
 .pagination a {
@@ -155,6 +196,24 @@ input[type="date"]:focus::before {
     color: white;
 }
 
+.pagination .page-item:first-child a,
+.pagination .page-item:last-child a,
+.pagination-info {
+    display: none;
+}
+
+.pagination svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+/* ページネーションの不要なコンテナを非表示 */
+.flex.justify-between.flex-1.sm\:hidden {
+    display: none !important;
+}
+
 /* モーダルを非表示にする（デフォルト） */
 .modal {
     position: fixed;
@@ -162,9 +221,10 @@ input[type="date"]:focus::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     display: none;
     z-index: 9999;
+    overflow: hidden;
 }
 
 .modal-content {
@@ -173,18 +233,35 @@ input[type="date"]:focus::before {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 400px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    text-align: left;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #5c4c40;
+    margin-bottom: 10px;
+    word-wrap: break-word;
 }
 
 .close-btn {
-    position: absolute;
-    top: 10px;
+    position: fixed;
+    top: 15px;
     right: 15px;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    z-index: 10000;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
 }
 
 /* チェックボックスがチェックされたらモーダルを表示 */
@@ -199,21 +276,33 @@ input[type="date"]:focus::before {
     color: white;
     padding: 7px 12px;
     border-radius: 5px;
-    width: 100px;
+    width: 50%;
 }
 
 .detail-btn:hover {
     background-color: #a3856f;
 }
 
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 /* 削除ボタンのスタイル（任意） */
 .delete-btn {
     background-color: #e74c3c;
-    color: white;
-    padding: 7px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    display: block;
+        width: 100px;
+        margin: 20px auto 0;
+        padding: 10px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
 }
 
 .delete-btn:hover {

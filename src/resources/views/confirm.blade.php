@@ -3,7 +3,7 @@
 @section('title', 'お問い合わせ確認')
 
 @section('content')
-<h1>Confirm</h1>
+<h2>Confirm</h2>
 <form action="{{ route('store') }}" method="POST">
     @csrf
     <table class="confirm-table">
@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <th>電話番号</th>
-            <td>{{ $contact['phone'] }}</td>
+            <td>{{ $contact['phone1'] }}-{{ $contact['phone2'] }}-{{ $contact['phone3'] }}</td>
         </tr>
         <tr>
             <th>住所</th>

@@ -19,7 +19,10 @@ class ContactController extends Controller
     }
     public function store(ContactRequest $request)
     {
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'phone1', 'phone2', 'phone3', 'email', 'address', 'building', 'category_id', 'detail']);
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'address', 'building', 'category_id', 'detail']);
+
+        $contact['phone'] = $request->phone1 . '-' . $request->phone2 . '-' . $request->phone3;
+
 
         Contact::create($contact);
 

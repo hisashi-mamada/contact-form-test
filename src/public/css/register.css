@@ -1,29 +1,43 @@
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    /* 画面の高さいっぱいにする */
+    background-color: #eee1d5;
+    /* 下線の下からの背景色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* レイアウト全体 */
 .register-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #f7f3ee;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    position: relative;
+        max-width: 500px;
+        /* 幅を広げる */
+        width: 100%;
+        padding: 40px 30px 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 右上のログインボタン */
-.login {
+.header-login {
     position: absolute;
-    top: 20px;
+    top: 50px;
     right: 30px;
 }
 
 .login-button {
     text-decoration: none;
-    font-size: 14px;
-    color: #8c7b70;
-    background: transparent;
-    border: 1px solid #d3c8be;
-    padding: 5px 10px;
-    border-radius: 5px;
+        font-size: 24px;
+        color: #8c7b70;
+        background: none;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #ccc;
 }
 
 .login-button:hover {
@@ -33,33 +47,57 @@
 
 /* タイトル */
 .register-title {
-    font-size: 28px;
-    color: #5c4c40;
-    margin-bottom: 20px;
+    position: absolute;
+        top: -150px;
+        /* 上部に配置 */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #eee1d5;
+        /* 背景をフォームと同じにして一体感を出す */
+        padding: 5px 15px;
+        font-size: 36px;
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+        color: #5c4c40;
+        border-radius: 8px;
+}
+
+form {
+    background: none;
+    padding: 0;
 }
 
 /* フォームグループ */
 .form-group {
-    margin-bottom: 15px;
-    text-align: left;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
 }
 
 /* ラベル */
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #5c4c40;
+    width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #5c4c40;
+        white-space: nowrap;
 }
 
 /* 入力フィールド */
 input {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #d3c8be;
-    border-radius: 5px;
-    font-size: 16px;
-    background: #fdfaf5;
+        max-width: 300px;
+        padding: 12px;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        background-color: #f9f8f6;
+        color: #5c4c40;
+        font-size: 14px;
+        box-sizing: border-box;
 }
 
 .error-message{
@@ -70,7 +108,7 @@ input {
 
 /* 登録ボタン */
 .register-button {
-    width: 100%;
+    width: 50%;
     padding: 12px;
     background-color: #5c4c40;
     color: white;

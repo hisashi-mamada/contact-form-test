@@ -1,70 +1,122 @@
-/* ログインページ全体 */
+/* ページ全体の背景とフォント */
+main {
+    width: 100%;
+        min-height: 100vh;
+        /* 画面の高さいっぱいにする */
+        background-color: #eee1d5;
+        /* 下線の下からの背景色 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+/* ログインフォームの枠 */
 .login-container {
-    width: 400px;
-    margin: 100px auto;
-    padding: 30px;
-    background: #f7f6f5;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 500px;
+        /* 幅を広げる */
+        width: 100%;
+        padding: 40px 30px 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* タイトル */
 .login-title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+    position: absolute;
+    top: -180px;
+    /* 上部に配置 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #eee1d5;
+    /* 背景をフォームと同じにして一体感を出す */
+    padding: 5px 15px;
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #5c4c40;
+    border-radius: 8px;
+}
+form {
+    background: none;
+    padding: 0;
 }
 
-/* フォームの各項目 */
+
+
+/* フォームのスタイル */
 .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     margin-bottom: 15px;
 }
 
+/* ラベルのデザイン */
 label {
+    width: 100%;
     display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #5c4c40;
+    white-space: nowrap;
 }
 
+/* 入力欄のデザイン */
 input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #e0dcd8;
-    border-radius: 5px;
-    background: #fff;
+    max-width: 300px;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #f9f8f6;
+    color: #5c4c40;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
 /* ログインボタン */
 .login-button {
-    width: 100%;
-    padding: 10px;
-    background: #8c7b70;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    width: 50%;
+        padding: 12px;
+        background: #8c7b70;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
 }
 
 .login-button:hover {
     background: #5c4c40;
 }
 
+/* エラーメッセージ */
+.error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
 /* 右上の新規登録ボタン */
 .header-register {
     position: absolute;
-    top: 20px;
+    top: 50px;
     right: 30px;
 }
 
 .register-button {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 24px;
     color: #8c7b70;
-    background: transparent;
-    border: 1px solid #d3c8be;
+    background: none;
+    border: 1px solid #ccc;
     padding: 5px 10px;
     border-radius: 5px;
+    background-color: #ccc;
 }
 
 .register-button:hover {
